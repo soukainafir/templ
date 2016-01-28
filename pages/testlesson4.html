@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html> <meta charset="UTF-8">
+<head>
+	<title>Doigté pour clavier Arabic</title>
+</head>
+ <link href="stylesheet1.css" rel="stylesheet" type="text/css" />
+
+ <body onload="Function()" 	style="height: 600px;">	
+		<div><p><button onclick="Start(),chrono()">Start</button></p></div>
+		<form name="forsec">
+<input type="text" size="3" name="secb"> minute(s)
+<input type="text" size="3" name="seca"> secondes
+
+
+
+<input type="button" value="Chrono" onclick="chrono()">
+<input type="button" value="RaZ" onclick="rasee()"> 
+<input type="button" value="Tempo" onclick="clearTimeout(compte)">
+
+</form>
+
+			<p id="car" style="display: none;">[{"cod": "1584", "car":"ذ", "key": "192"},{"cod": "49", "car":"1", "key": "49"},{"cod": "50", "car":"2", "key": "50"},{"cod": "51", "car":"3", "key": "51"},{"cod": "52", "car":"4", "key": "52"},{"cod": "53", "car":"5", "key": "53"},{"cod": "54", "car":"6", "key": "54"},{"cod": "55", "car":"7", "key": "55"},{"cod": "56", "car":"8", "key": "56"},{"cod": "57", "car":"9", "key": "57"},{"cod": "48", "car":"0", "key": "48"},{"cod": "45", "car":"-", "key": "189"},{"cod": "61", "car":"=", "key": "187"},{"cod": "", "car":"backspace", "key": "8"},{"cod": "", "car":"tab", "key": "9"},{"cod": "1590", "car":"ض", "key": "81"},{"cod": "1589", "car":"ص", "key": "87"},{"cod": "1579", "car":"ث", "key": "69"},{"cod": "1602", "car":"ق", "key": "82"},{"cod": "1601", "car":"ف", "key": "84"},{"cod": "1594", "car":"غ", "key": "89"},{"cod": "1593", "car":"ع", "key": "85"},{"cod": "1607", "car":"ه", "key": "73"},{"cod": "1582", "car":"خ", "key": "79"},{"cod": "1581", "car":"ح", "key": "80"},{"cod": "1580", "car":"ج", "key": "219"},{"cod": "1583", "car":"د", "key": "221"},{"cod": "92", "car":"\\", "key": "220"},{"cod": "", "car":"cap", "key": "20"},{"cod": "1588",  "car":"ش", "key": "65"},{"cod": "1587", "car":"س", "key": "83"},{"cod": "1610", "car":"ي", "key": "68"},{"cod": "1576", "car":"ب", "key": "70"},{"cod": "1604", "car":"ل", "key": "71"},{"cod": "1575", "car":"ا", "key": "72"},{"cod": "1578", "car":"ت", "key": "74"},{"cod": "1606", "car":"ن", "key": "75"},{"cod": "1605", "car":"م", "key": "76"},{"cod": "1603", "car":"ك", "key": "186"},{"cod": "1591", "car":"ط", "key": "222"},{"cod": "", "car":"entrer", "key": "13"},{"cod": "", "car":"shift", "key": "16"},{"cod": "1574", "car":"ئ", "key": "90"},{"cod": "1569", "car":"ء", "key": "88"},{"cod": "1572", "car":"ؤ", "key": "67"},{"cod": "1585", "car":"ر", "key": "86"},{"cod": "1604", "car":"ل", "key": "66"},{"cod": "1609", "car":"ى", "key": "78"},{"cod": "1577", "car":"ة", "key": "77"},{"cod": "1608", "car":"و", "key": "188"},{"cod": "1586", "car":"ز", "key": "188"},{"cod": "1586", "car":"ز", "key": "188"},{"cod": "", "car":"shift2", "key": "shift"},{"cod": "", "car":"ctrl", "key": "17"},{"cod": "", "car":"fn", "key": "91"},{"cod": "", "car":"alt", "key": "18"},{"cod": "32", "car":"espace", "key": "32"},{"cod": "", "car":"alt2", "key": "18p"},{"cod": "", "car":"esc", "key": "93"},{"cod": "", "car":"ctrl2", "key": "17p"}]</p>
+			<p id="text"></p>
+			<p id="a"></p>
+	<div>
+		<input type="text" name="demo" id="demo" disabled="disabled" style="width: 690px;" onkeydown="myFunction(event)">
+	</div>
+	
+
+
+		
+
+	
+</body>
+
+<script type="text/javascript">
+			var data=JSON.parse(document.getElementById("car").innerHTML);
+			
+			
+	var text=document.getElementById("text").innerHTML;
+	// console.log(text);
+	var res = text.split("");
+			console.log(res);
+
+			
+			i=0;
+ 			var Q=[0,14,28,41,53,60];
+		for(var k=0;k<Q.length;k++)
+		{	
+			document.write("<div class=\"containerdiv\"> <img class=\"cornerimage\" style=\"bottom: 10px; left: 21px; top: 323px;width: 273px;\" src=\"ClavierArabe/lefthand.png\"> <img class=\"cornerimage\" style=\"bottom: 10px; left: 348px; top: 323px;width: 273px;\" src=\"ClavierArabe/righthand.png\">");
+
+			for(var j=Q[k]; j<Q[k+1];j++)
+	{		if(data[j].key=="32"){ data[j].key="espace";}
+		document.write("<p><img id="+data[j].key+" src=\"clavierArabe/"+data[j].key+".png\" class=\"main\"><img id="+data[j].key+"p src=\"ClavierArabe/"+data[j].key+"p.png\" class=\"overlay\"></p>"
+	);
+	if(data[j].key=="espace"){ data[j].key="32";}
+	}
+			document.write("</div>");}
+			  var items = [];
+		
+			var j=0;
+			function Function() {
+				  $.getJSON('lessons/bottum row/bottumrowrevision.json' , function(data) {
+    
+  
+
+          $.each(data, function(key, val){
+
+    // items.push('<li id="' + key +  '">' + val + '</li>');
+     items.push('<div style="height:30px" id="' + key +  '">' + val + '</div>');
+    
+         });
+          j=items.length;
+ $('<ul/>' , {
+
+    'class' : 'interest-list',
+    html: items.join('')
+}).appendTo('#text');
+
+    });
+   
+
+ 
+    	
+   
+
+		
+	}
+
+var T=[];
+	var res=[[]];
+	function Start(event)
+	{
+		document.getElementById("demo").disabled = false;
+		
+     	
+		for(var k=0;k<10;k++)
+	    {
+			try {
+ 					 var text=document.getElementById("mot"+(k+1)).innerHTML;
+					console.log(text);
+		
+					res[k]= text.split("");
+
+			for (var s=0; s<res[k].length; s++)
+			{
+				T.push(
+						(res[k][s].charCodeAt(0)).toString()
+						);
+			}
+			
+				}
+			catch(err) {
+   					 console.log(res);
+				}
+		
+		
+		}
+		console.log(F("1576"));
+		console.log(data[F(T[0])].key); 
+		  $("#"+data[F(T[0])].key).hide();
+    		$("#"+data[F(T[0])].key+"p").show(); 
+    	
+	}
+
+	function myFunction(event) {
+		
+    var x = event.keyCode;
+    // console.log(x);
+
+    		/*P.push({"cod": T[i].charCodeAt(0),
+						"car": T[i],
+						"key": x});
+						
+    		console.log(P);
+    		
+    		 for(var j=0; j<P.length; j++)
+    		 {document.getElementById("demon").innerHTML=document.getElementById("demon").innerHTML+"{\"cod\": \""+P[j].cod+"\", \"car\":\""+P[j].car+"\", \"key\": \""+P[j].key+"\"},";}
+    		i++;*/
+    		if(x==data[F(T[i])].key)
+    		{	$("#"+data[F(T[i])].key+"p").hide();	  
+    			$("#"+data[F(T[i])].key).show();
+    		
+    				console.log("success");
+    					document.getElementById("demo").style.color = "blue";
+    				i++;
+    				  
+    			$("#"+data[F(T[i])].key).hide();
+    				$("#"+data[F(T[i])].key+"p").show();
+
+    				
+    		}
+    		else 
+    			{ event.preventDefault();
+    				document.getElementById("demo").style.color = "red";
+
+    			}
+/*
+    		if (i=T.length-1)
+    		{
+    			
+    			alert("exercice terminé");
+    		}*/
+
+      /* $("#a").hide();
+        $("#ap").show();*/
+    
+}
+/*rechercher indice d'un caractere dans la table data*/
+function F(val){
+var a=0;
+while(a<data.length && val!=data[a].cod)
+	a++;
+return a;
+}
+/*chronometre*/
+var centi=0 // initialise les dixtièmes
+var secon=0 //initialise les secondes
+var minu=0 //initialise les minutes
+
+function chrono(){
+centi++; //incrémentation des dixièmes de 1
+if (centi>9){centi=0;secon++} //si les dixièmes > 9, on les réinitialise à 0 et on incrémente les secondes de 1
+
+if (secon>59){secon=0;minu++} //si les secondes > 59, on les réinitialise à 0 et on incrémente les minutes de 1
+
+document.forsec.secc.value=" "+centi //on affiche les dixièmes
+document.forsec.seca.value=" "+secon //on affiche les secondes
+document.forsec.secb.value=" "+minu //on affiche les minutes
+compte=setTimeout('chrono()',100) //la fonction est relancée tous les 10° de secondes
+
+}
+
+function rasee(){ //fonction qui remet les compteurs à 0
+clearTimeout(compte) //arrête la fonction chrono()
+centi=0;
+secon=0;
+minu=0;
+document.forsec.secc.value=" "+centi
+document.forsec.seca.value=" "+secon
+document.forsec.secb.value=" "+minu
+}
+
+
+</script>
+
+<script src="jquery.min.js"> </script>
+</html>

@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html> <meta charset="UTF-8">
+<head>
+	<title>Doigté pour clavier Arabic</title>
+</head>
+<style type="text/css">
+	p{
+	display:inline;
+	width:22px;
+	}
+	.main{
+	    
+		height: 40px;
+		border: 1px solid rgba(170, 170, 170, 1.60);
+
+			}
+			.overlay{
+				
+				display: none;
+				height: 40px;
+		border: 1px solid rgba(170, 170, 170, 1.60);
+
+			}
+			div{
+				height: 42.8px;
+				line-height : 100px;
+			}
+		#espace{
+ width: 330px;
+}
+#ctrl2{
+width: 42px;}
+#shift2{
+width:128px;
+}
+#backspace{
+width: 100px;}
+#\\{
+width: 57px;}
+#13{
+width:100px;}
+.cornerimage { position: absolute; opacity: 0.3;  } 
+ul{
+
+    padding-left: 50px;
+
+}
+.containerdiv{
+	float:left;
+	postion:relative;
+}
+#h81{
+	top: 311px;
+left: 1px;
+width: 233px;
+}
+#h87{
+	
+
+    top: 321px;
+    left: 31px;
+width: 233px;
+}
+#h69
+{
+
+    width: 259px;
+ 
+    top: 319px;
+    left: 24px;
+
+}
+#h71
+{
+
+    width: 237px;
+    top: 340px;
+    left: 57px;
+
+}
+#h70
+{top: 340px;
+
+    left: 21px;
+width: 233px;}
+#h68
+{top: 340px;
+
+    left: 21px;
+width: 233px;}
+#h83
+{
+	top: 340px;
+
+    left: 21px;
+width: 233px;
+}
+#h65
+{
+	top: 340px;
+
+    left: 21px;
+width: 233px;
+}
+#h67
+{
+	width: 233px;
+top: 350px;
+left: 41px;
+}
+#h86
+{
+	width: 233px;
+
+    left: 45px;
+    top: 359px;
+
+}
+#h82
+{
+
+    width: 230px;
+    top: 312px;
+    left: 49px;
+
+    }
+    #h84
+    {
+    width: 235px;
+    top: 312px;
+    left: 81px;
+}
+#h90
+{
+    width: 265px;
+    top: 346px;
+    left: 51px;
+}
+
+#h190{
+
+    width: 233px;
+   
+    left: 253px;
+    top: 362px;
+}
+#h77{
+
+    width: 233px;
+    left: 270px;
+    top: 364px;
+
+}
+#h188{
+
+    width: 193px;
+    left: 251px;
+    top: 359px;
+
+}
+#h88{
+
+    width: 214px;
+    left: 74px;
+    top: 356px;
+
+}
+#h80{
+    width: 251px;
+    left: 292px;
+    top: 321px;
+
+}
+#h79{
+left: 255px
+;width: 240px;
+top: 319px;
+}
+
+#h73{
+	left: 268px;width: 239px;top: 314px;
+}
+
+#h222{
+	top: 340px;
+	width: 233px;
+	left: 21px;
+}
+#h72{
+
+    width: 230px;
+    left: 262px;
+    top: 341px;
+
+}
+#h74{
+
+    width: 260px;
+    left: 301px;
+    top: 340px;
+
+}
+
+#h75{
+
+    width: 260px;
+    left: 301px;
+    top: 340px;
+
+}
+
+#h76{
+
+    width: 260px;
+    left: 301px;
+    top: 340px;
+
+}
+#h78{
+
+    width: 233px;
+    left: 236px;
+    top: 358px;
+
+}
+#h186{
+
+    width: 260px;
+    left: 301px;
+    top: 340px;
+
+}
+
+
+#h89{
+
+    width: 217px;
+    left: 220px;
+    top: 322px;
+
+}
+
+#h85{
+
+    width: 243px;
+    left: 246px;
+    top: 318px;
+
+}
+.butt{
+	color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    border-radius: 4px;
+    padding: 2px 6px 3px;
+    border: 2px outset b
+}
+
+</style>     
+
+ <body onload="Function()" 	style="height: 600px;">	
+<!-- Bouton Start pour commencer l'exercice -->
+		<div><p><button onclick="Start(),chrono()">ابدء</button></p></div>
+		<form style="padding-top: 40px" name="forsec">
+						<input id="min" type="text" size="3" name="secb"style="border: 0px;width: 25px;"> ثانية
+				<input id="sec" type="text" size="3" name="seca"style="border: 0px;width: 25px;"> دقيقة
+
+
+				<input type="button" value="انهاء التمرين" onclick="rasee()">
+				
+
+		</form>
+
+
+				
+
+
+				<!-- Tableau en json des caractere arabes avec l'equivalence entre l'Unicode(cod) et le keycode(key) correspndant  -->
+			<p id="car" style="display: none;">[{"cod": "1584", "car":"ذ", "key": "192"},{"cod": "49", "car":"1", "key": "49"},{"cod": "50", "car":"2", "key": "50"},{"cod": "51", "car":"3", "key": "51"},{"cod": "52", "car":"4", "key": "52"},{"cod": "53", "car":"5", "key": "53"},{"cod": "54", "car":"6", "key": "54"},{"cod": "55", "car":"7", "key": "55"},{"cod": "56", "car":"8", "key": "56"},{"cod": "57", "car":"9", "key": "57"},{"cod": "48", "car":"0", "key": "48"},{"cod": "45", "car":"-", "key": "189"},{"cod": "61", "car":"=", "key": "187"},{"cod": "", "car":"backspace", "key": "8"},{"cod": "", "car":"tab", "key": "9"},{"cod": "1590", "car":"ض", "key": "81"},{"cod": "1589", "car":"ص", "key": "87"},{"cod": "1579", "car":"ث", "key": "69"},{"cod": "1602", "car":"ق", "key": "82"},{"cod": "1601", "car":"ف", "key": "84"},{"cod": "1594", "car":"غ", "key": "89"},{"cod": "1593", "car":"ع", "key": "85"},{"cod": "1607", "car":"ه", "key": "73"},{"cod": "1582", "car":"خ", "key": "79"},{"cod": "1581", "car":"ح", "key": "80"},{"cod": "1580", "car":"ج", "key": "219"},{"cod": "1583", "car":"د", "key": "221"},{"cod": "92", "car":"\\", "key": "220"},{"cod": "", "car":"cap", "key": "20"},{"cod": "1588",  "car":"ش", "key": "65"},{"cod": "1587", "car":"س", "key": "83"},{"cod": "1610", "car":"ي", "key": "68"},{"cod": "1576", "car":"ب", "key": "70"},{"cod": "1604", "car":"ل", "key": "71"},{"cod": "1575", "car":"ا", "key": "72"},{"cod": "1578", "car":"ت", "key": "74"},{"cod": "1606", "car":"ن", "key": "75"},{"cod": "1605", "car":"م", "key": "76"},{"cod": "1603", "car":"ك", "key": "186"},{"cod": "1591", "car":"ط", "key": "222"},{"cod": "", "car":"entrer", "key": "13"},{"cod": "", "car":"shift", "key": "16"},{"cod": "1574", "car":"ئ", "key": "90"},{"cod": "1569", "car":"ء", "key": "88"},{"cod": "1572", "car":"ؤ", "key": "67"},{"cod": "1585", "car":"ر", "key": "86"},{"cod": "1604", "car":"ل", "key": "66"},{"cod": "1609", "car":"ى", "key": "78"},{"cod": "1577", "car":"ة", "key": "77"},{"cod": "1608", "car":"و", "key": "188"},{"cod": "1586", "car":"ز", "key": "190"},{"cod": "1586", "car":"ظ", "key": "223"},{"cod": "", "car":"shift2", "key": "shift"},{"cod": "", "car":"ctrl", "key": "17"},{"cod": "", "car":"fn", "key": "91"},{"cod": "", "car":"alt", "key": "18"},{"cod": "32", "car":"espace", "key": "32"},{"cod": "", "car":"alt2", "key": "18p"},{"cod": "", "car":"esc", "key": "93"},{"cod": "", "car":"ctrl2", "key": "17p"}]</p>
+			<p id="text"></p>
+			<p id="a"></p>
+	<div style="padding-bottom: 30px;">
+		<input type="text" name="demo" id="demo" style="width: 588px;" onkeydown="myFunction(event)">
+	</div>
+	
+
+
+		</div>
+	
+</body>
+
+<script type="text/javascript">
+			
+
+			// 
+				/*chronometre*/
+					var centi=0 // initialise les dixtièmes
+					var secon=0 //initialise les secondes
+					var minu=0 //initialise les minutes
+
+					function chrono(){
+					centi++; //incrémentation des dixièmes de 1
+					if (centi>9){centi=0;secon++} //si les dixièmes > 9, on les réinitialise à 0 et on incrémente les secondes de 1
+
+					if (secon>59){secon=0;minu++} //si les secondes > 59, on les réinitialise à 0 et on incrémente les minutes de 1
+
+
+					document.forsec.seca.value=" "+secon //on affiche les secondes
+					document.forsec.secb.value=" "+minu //on affiche les minutes
+					compte=setTimeout('chrono()',100) //la fonction est relancée tous les 10° de secondes
+
+					}
+
+					function rasee(){ //fonction qui remet les compteurs à 0
+					clearTimeout(compte) //arrête la fonction chrono()
+					centi=0;
+					secon=0;
+					minu=0;
+					document.forsec.secc.value=" "+centi
+					document.forsec.seca.value=" "+secon
+					document.forsec.secb.value=" "+minu
+					}
+
+			var data=JSON.parse(document.getElementById("car").innerHTML);
+			var text=document.getElementById("text").innerHTML;
+			
+			var res = text.split("");
+			var items = [];
+			var T=[];
+			var res=[[]];			
+			i=0;		
+						// Les valeurs de Q définissent le nombre des touches à insérer dans chaque ligne du clavier
+			 var Q=[0,14,28,41,53,60];
+			 var left=[81,87,69,82,84,65,83,68,70,71,90,88,67,86,66];
+			 var right=[89,85,73,79,80,72,74,75,76,186,78,77,188,190,77];
+			 		document.write("<div>");
+			for(var k=0;k<Q.length;k++)
+					{	// Cette boucle insere toute la ligne
+						
+						document.write("<div id=\"offset\">")
+								// Cette boucle imbriquée insére toute les touches d'une ligne 
+								
+								for(var j=Q[k]; j<Q[k+1];j++)
+									{		if(data[j].key=="32"){ data[j].key="espace";}
+							
+
+								document.write("<p><img id="+data[j].key+" src=\"clavierArabe/"+data[j].key+".png\" class=\"main\"><img id="+data[j].key+"p src=\"ClavierArabe/"+data[j].key+"p.png\" class=\"overlay\"></p>");
+										
+									if(data[j].key=="espace"){ data[j].key="32";
+									}
+					}
+					document.write("</div>");}
+			 	
+							document.write("</div>");
+					document.write("<div>");
+			for(var k=0;k<Q.length;k++)
+					{	// Cette boucle insere toute la ligne
+						
+						document.write("<div id=\"offset\">")
+								// Cette boucle imbriquée insére toute les touches d'une ligne 
+								
+								for(var j=Q[k]; j<Q[k+1];j++)
+									{		if(data[j].key=="32"){ data[j].key="espace";}
+							
+									
+								document.write("<div class=\"containerdiv\"> <img id=\"h"+data[j].key+"\"class=\"cornerimage\" style=\"display:none\" src=\"ClavierArabe/h"+data[j].key+".png\">");	
+										var id;
+
+									if(data[j].key=="espace"){ data[j].key="32";
+									}
+					}
+					document.write("</div>");}
+			 	
+							document.write("</div>");
+			
+
+						//Fonction pour récuperer les leçons sous la forme json 
+
+					var buffer="222";
+   					var buffer1="76";
+			function Function() {
+				  $.getJSON('lessons/bottum row/new1.json' , function(data) {
+   					 var offset = $('#offset').offset();
+   					/*$("#h222").offset({top: offset.top+125, left:offset.left+20 });
+ 					$("#h90").offset({top: offset.top+125, left:offset.left+330 });*/
+   					$("#h222").show();
+   					$("#h76").show();
+   					
+
+  					
+ 					
+				   	 $.each(data, function(key, val){
+
+				    // items.push('<li id="' + key +  '">' + val + '</li>');
+				    	 items.push('<span style="height:30px;  font-size: 20px;" id="' + key +  '">' + val + '</span>');
+				    
+				         });
+				          
+					 $('<ul/>' , {
+
+				    'class' : 'interest-list',
+				    html: items.join('--')
+						}).appendTo('#text');
+
+				    });
+  			 }
+
+						// Fonction qui déclenche l'exercice 
+
+			function Start(event)
+			{	 var offset = $('#offset').offset();
+				document.getElementById('demo').focus();
+				
+				for(var k=0;k<100;k++)// boucle sur les mots de l'exercice
+			    {
+					try {
+		 					var text=document.getElementById("lettre"+(k+1)).innerHTML;// recupere UN mot de l'exercice
+							
+							res[k]= text.split("");
+
+							for (var s=0; s<res[k].length; s++)// boucle sur les caractere apres le split du mot d'indice K
+							{
+								T.push(
+										(res[k][s].charCodeAt(0)).toString()
+										);
+							}
+							
+						}
+					catch(err) {
+		   					 console.log(res);
+						}
+				
+				
+				}
+				//On a enfin un tableau T avec tous les Charcode des caracteres des mots de l'exercice
+				document.getElementById("lettre1").style.color = "blue";
+				$("#"+data[F(T[0])].key).hide();
+		    	$("#"+data[F(T[0])].key+"p").show(); 
+		    	$("#h"+buffer).hide();
+			    			$("#h"+buffer1).hide();
+			    			$("#h"+data[F(T[0])].key).show();
+
+		    	for(var l=0;l<right.length;l++)
+			    	{if(data[F(T[0])].key==right[l])
+			    			{
+ 								$("#h"+buffer).show();
+			    				break;
+ 							
+ 							}
+ 							
+ 						}
+ 						for(l=0;l<left.length;l++)
+			    	{if(data[F(T[0])].key==left[l])
+			    			{ 	$("#h"+buffer1).show();
+			    				break;
+ 							
+ 							}
+ 							
+ 						}
+			}
+
+
+
+			var agauche=0;
+			/*rechercher indice d'un caractere dans la table data*/
+			function F(val){
+			var a=0;
+			while(a<data.length && val!=data[a].cod)
+				a++;
+			return a;
+			}
+			
+			
+			// Fonction pour la comparaison entre le caractere entré et la touche
+			function myFunction(event) {
+					var offseta = $('#offset').offset();
+			    var x = event.keyCode;
+			   console.log(x);console.log(T.length);
+			   if(i==T.length-1)
+			   	{
+			   	alert("Exercice terminé");}
+			    			/*$("#h"+data[F(T[i])].key).offset({top: offset.top+20, left:offset.left});}
+			    					else $("#h"+data[F(T[i])].key).offset({top: offset.top+20, left:offset.left+320});}*/
+			    // console.log(x);
+
+			    		/*P.push({"cod": T[i].charCodeAt(0),
+									"car": T[i],
+									"key": x});
+									
+			    		console.log(P);
+			    		
+			    		 for(var j=0; j<P.length; j++)
+			    		 {document.getElementById("demon").innerHTML=document.getElementById("demon").innerHTML+"{\"cod\": \""+P[j].cod+"\", \"car\":\""+P[j].car+"\", \"key\": \""+P[j].key+"\"},";}
+			    		i++;*/
+			    		if(x==data[F(T[i])].key)
+			    		{	$("#h"+buffer).hide();
+			    			$("#h"+buffer1).hide();
+			    			$("#h"+data[F(T[i])].key).hide();
+			    			$("#"+data[F(T[i])].key+"p").hide();	  
+			    			$("#"+data[F(T[i])].key).show();
+			    			document.getElementById("lettre"+(i+1)).style.color = "black";
+			    				console.log("success");
+			    					document.getElementById("demo").style.color = "blue";
+			    				i++;
+			    			document.getElementById("lettre"+(i+1)).style.color = "blue";
+			    		
+			    				for(var l=0;l<right.length;l++)
+			    	{if(data[F(T[i])].key==right[l])
+			    			{
+ 								$("#h"+buffer).show();
+			    				$("#h"+data[F(T[i])].key).show();break;
+ 							
+ 							}
+ 							
+ 						}
+ 						for(l=0;l<left.length;l++)
+			    	{if(data[F(T[i])].key==left[l])
+			    			{/*$("#h"+data[F(T[i])].key).offset({top: offseta.top+70, left:offseta.left+30 });*/
+ 								$("#h"+buffer1).show();
+			    				$("#h"+data[F(T[i])].key).show();break;
+ 							
+ 							}
+ 							
+ 						}
+			    				  
+			    			$("#"+data[F(T[i])].key).hide();
+			    				$("#"+data[F(T[i])].key+"p").show();
+
+			    				
+			    		}
+			    		else 
+			    			{ event.preventDefault();
+			    				document.getElementById("demo").style.color = "red";
+			    				document.getElementById("lettre"+(i+1)).style.color = "red";
+			    				document.getElementById("lettre"+(i+1)).style.FontSize = "60px";
+
+			    			}
+
+			/*			
+			    		if (i=T.length-1)
+			    		{
+			    			
+			    			alert("exercice terminé");
+			    		}*/
+
+			      /* $("#a").hide();
+			        $("#ap").show();*/
+			    
+			}
+
+					
+
+</script>
+
+<script src="jquery.min.js"> </script>
+</html>
