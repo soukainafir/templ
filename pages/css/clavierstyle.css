@@ -1,0 +1,288 @@
+p{
+	display:inline;
+	width:22px;
+	}
+	.main{
+	    
+		height: 40px;
+		border: 1px solid rgba(170, 170, 170, 1.60);
+
+			}
+			.overlay{
+				
+				display: none;
+				height: 40px;
+		border: 1px solid rgba(170, 170, 170, 1.60);
+
+			}
+			div{
+				height: 42.8px;
+				line-height : 100px;
+			}
+		#espace{
+ width: 330px;
+}
+#ctrl2{
+width: 42px;}
+#shift2{
+width:128px;
+}
+#backspace{
+width: 100px;}
+#\\{
+width: 57px;}
+#13{
+width:100px;}
+.cornerimage { position: absolute; opacity: 0.3;  } 
+ul{
+
+    padding-left: 50px;
+
+}
+.containerdiv{
+	float:left;
+	postion:relative;
+}
+#h81{
+	top: 311px;
+left: 1px;
+width: 233px;
+}
+#h87{
+	
+
+    top: 321px;
+    left: 31px;
+width: 233px;
+}
+#h69
+{
+
+    width: 259px;
+ 
+    top: 319px;
+    left: 24px;
+
+}
+#h71
+{
+
+    width: 237px;
+    top: 340px;
+    left: 57px;
+
+}
+#h70
+{top: 340px;
+
+    left: 21px;
+width: 233px;}
+#h68
+{top: 340px;
+
+    left: 21px;
+width: 233px;}
+#h83
+{
+	top: 340px;
+
+    left: 21px;
+width: 233px;
+}
+#h65
+{
+	top: 340px;
+
+    left: 21px;
+width: 233px;
+}
+#h67
+{
+	width: 233px;
+top: 350px;
+left: 41px;
+}
+#h86
+{
+	width: 233px;
+
+    left: 45px;
+    top: 359px;
+
+}
+#h82
+{
+
+    width: 230px;
+    top: 312px;
+    left: 49px;
+
+    }
+    #h84
+    {
+    width: 235px;
+    top: 312px;
+    left: 81px;
+}
+#h90
+{
+    width: 265px;
+    top: 346px;
+    left: 51px;
+}
+
+#h190{
+
+    width: 233px;
+   
+    left: 253px;
+    top: 362px;
+}
+#h77{
+
+    width: 233px;
+    left: 270px;
+    top: 364px;
+
+}
+#h188{
+
+    width: 193px;
+    left: 251px;
+    top: 359px;
+
+}
+#h88{
+
+    width: 214px;
+    left: 74px;
+    top: 356px;
+
+}
+#h80{
+    width: 251px;
+    left: 292px;
+    top: 321px;
+
+}
+#h79{
+left: 255px
+;width: 240px;
+top: 319px;
+}
+
+#h73{
+	left: 268px;width: 239px;top: 314px;
+}
+
+#h222{
+	top: 340px;
+	width: 233px;
+	left: 21px;
+}
+#h72{
+
+    width: 230px;
+    left: 262px;
+    top: 341px;
+
+}
+#h74{
+
+    width: 260px;
+    left: 301px;
+    top: 340px;
+
+}
+
+#h75{
+
+    width: 260px;
+    left: 301px;
+    top: 340px;
+
+}
+
+#h76{
+
+    width: 260px;
+    left: 301px;
+    top: 340px;
+
+}
+#h78{
+
+    width: 233px;
+    left: 236px;
+    top: 358px;
+
+}
+#h186{
+
+    width: 260px;
+    left: 301px;
+    top: 340px;
+
+}
+
+
+#h89{
+
+    width: 217px;
+    left: 220px;
+    top: 322px;
+
+}
+
+#h85{
+
+    width: 243px;
+    left: 246px;
+    top: 318px;
+
+}
+.butt{
+	color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+    border-radius: 4px;
+    padding: 2px 6px 3px;
+    border: 2px outset b
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #18bb9c;
+    width: 40%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}

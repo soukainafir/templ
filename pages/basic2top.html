@@ -2,283 +2,43 @@
 <html> <meta charset="UTF-8">
 <head>
 	<title>Doigté pour clavier Arabic</title>
+  <link href="css/clavierstyle.css" rel="stylesheet" type="text/css" />
+        <!-- font Awesome -->
+      
+
 </head>
-<style type="text/css">
-	p{
-	display:inline;
-	width:22px;
-	}
-	.main{
-	    
-		height: 40px;
-		border: 1px solid rgba(170, 170, 170, 1.60);
-
-			}
-			.overlay{
-				
-				display: none;
-				height: 40px;
-		border: 1px solid rgba(170, 170, 170, 1.60);
-
-			}
-			div{
-				height: 42.8px;
-				line-height : 100px;
-			}
-		#espace{
- width: 330px;
-}
-#ctrl2{
-width: 42px;}
-#shift2{
-width:128px;
-}
-#backspace{
-width: 100px;}
-#\\{
-width: 57px;}
-#13{
-width:100px;}
-.cornerimage { position: absolute; opacity: 0.3;  } 
-ul{
-
-    padding-left: 50px;
-
-}
-.containerdiv{
-	float:left;
-	postion:relative;
-}
-#h81{
-	top: 311px;
-left: 1px;
-width: 233px;
-}
-#h87{
-	
-
-    top: 321px;
-    left: 31px;
-width: 233px;
-}
-#h69
-{
-
-    width: 259px;
  
-    top: 319px;
-    left: 24px;
-
-}
-#h71
-{
-
-    width: 237px;
-    top: 340px;
-    left: 57px;
-
-}
-#h70
-{top: 340px;
-
-    left: 21px;
-width: 233px;}
-#h68
-{top: 340px;
-
-    left: 21px;
-width: 233px;}
-#h83
-{
-	top: 340px;
-
-    left: 21px;
-width: 233px;
-}
-#h65
-{
-	top: 340px;
-
-    left: 21px;
-width: 233px;
-}
-#h67
-{
-	width: 233px;
-top: 350px;
-left: 41px;
-}
-#h86
-{
-	width: 233px;
-
-    left: 45px;
-    top: 359px;
-
-}
-#h82
-{
-
-    width: 230px;
-    top: 312px;
-    left: 49px;
-
-    }
-    #h84
-    {
-    width: 235px;
-    top: 312px;
-    left: 81px;
-}
-#h90
-{
-    width: 265px;
-    top: 346px;
-    left: 51px;
-}
-
-#h190{
-
-    width: 233px;
-   
-    left: 253px;
-    top: 362px;
-}
-#h77{
-
-    width: 233px;
-    left: 270px;
-    top: 364px;
-
-}
-#h188{
-
-    width: 193px;
-    left: 251px;
-    top: 359px;
-
-}
-#h88{
-
-    width: 214px;
-    left: 74px;
-    top: 356px;
-
-}
-#h80{
-    width: 251px;
-    left: 292px;
-    top: 321px;
-
-}
-#h79{
-left: 255px
-;width: 240px;
-top: 319px;
-}
-
-#h73{
-	left: 268px;width: 239px;top: 314px;
-}
-
-#h222{
-	top: 340px;
-	width: 233px;
-	left: 21px;
-}
-#h72{
-
-    width: 230px;
-    left: 262px;
-    top: 341px;
-
-}
-#h74{
-
-    width: 260px;
-    left: 301px;
-    top: 340px;
-
-}
-
-#h75{
-
-    width: 260px;
-    left: 301px;
-    top: 340px;
-
-}
-
-#h76{
-
-    width: 260px;
-    left: 301px;
-    top: 340px;
-
-}
-#h78{
-
-    width: 233px;
-    left: 236px;
-    top: 358px;
-
-}
-#h186{
-
-    width: 260px;
-    left: 301px;
-    top: 340px;
-
-}
-
-
-#h89{
-
-    width: 217px;
-    left: 220px;
-    top: 322px;
-
-}
-
-#h85{
-
-    width: 243px;
-    left: 246px;
-    top: 318px;
-
-}
-.butt{
-	color: #fff;
-    background-color: #428bca;
-    border-color: #357ebd;
-    border-radius: 4px;
-    padding: 2px 6px 3px;
-    border: 2px outset b
-}
-
-</style>     
-
  <body onload="Function()" 	style="height: 600px;">	
 <!-- Bouton Start pour commencer l'exercice -->
 		<div><p><button type="button" class="butt" onclick="Start(),chrono()">ابدء</button></p>	<input type="button" class="butt" value="انهاء التمرين" onclick="rasee()"></div>
 		<form style="padding-top: 40px" name="forsec">
-				<input id="min" type="text" size="3" name="secb"style="border: 0px;width: 16px;"> دقيقة
-				<input id="sec" type="text" size="3" name="seca"style="border: 0px;width: 16px;"> ثانية
+				<input id="min" type="text" size="3" name="secb"style="border: 0px;width: 46px;"> دقيقة
+				<input id="sec" type="text" size="3" name="seca"style="border: 0px;width: 46px;"> ثانية
+<!-- The Modal -->
+<div id="myModal" class="modal">
 
+  <!-- Modal content -->		
+  <div class="modal-content" style=" height: 100px;">
+    <span class="close">×</span>
+    <p id="modalcontent">Some text in the Modal..</p>
+  </div>
+
+</div>
 
 			
 				
 
 		</form>
 
+
 				
 
 
 				<!-- Tableau en json des caractere arabes avec l'equivalence entre l'Unicode(cod) et le keycode(key) correspndant  -->
-			<p id="car" style="display: none;">[{"cod": "1584", "car":"ذ", "key": "192"},{"cod": "49", "car":"1", "key": "49"},{"cod": "50", "car":"2", "key": "50"},{"cod": "51", "car":"3", "key": "51"},{"cod": "52", "car":"4", "key": "52"},{"cod": "53", "car":"5", "key": "53"},{"cod": "54", "car":"6", "key": "54"},{"cod": "55", "car":"7", "key": "55"},{"cod": "56", "car":"8", "key": "56"},{"cod": "57", "car":"9", "key": "57"},{"cod": "48", "car":"0", "key": "48"},{"cod": "45", "car":"-", "key": "189"},{"cod": "61", "car":"=", "key": "187"},{"cod": "", "car":"backspace", "key": "8"},{"cod": "", "car":"tab", "key": "9"},{"cod": "1590", "car":"ض", "key": "81"},{"cod": "1589", "car":"ص", "key": "87"},{"cod": "1579", "car":"ث", "key": "69"},{"cod": "1602", "car":"ق", "key": "82"},{"cod": "1601", "car":"ف", "key": "84"},{"cod": "1594", "car":"غ", "key": "89"},{"cod": "1593", "car":"ع", "key": "85"},{"cod": "1607", "car":"ه", "key": "73"},{"cod": "1582", "car":"خ", "key": "79"},{"cod": "1581", "car":"ح", "key": "80"},{"cod": "1580", "car":"ج", "key": "219"},{"cod": "1583", "car":"د", "key": "221"},{"cod": "92", "car":"\\", "key": "220"},{"cod": "", "car":"cap", "key": "20"},{"cod": "1588",  "car":"ش", "key": "65"},{"cod": "1587", "car":"س", "key": "83"},{"cod": "1610", "car":"ي", "key": "68"},{"cod": "1576", "car":"ب", "key": "70"},{"cod": "1604", "car":"ل", "key": "71"},{"cod": "1575", "car":"ا", "key": "72"},{"cod": "1578", "car":"ت", "key": "74"},{"cod": "1606", "car":"ن", "key": "75"},{"cod": "1605", "car":"م", "key": "76"},{"cod": "1603", "car":"ك", "key": "186"},{"cod": "1591", "car":"ط", "key": "222"},{"cod": "", "car":"entrer", "key": "13"},{"cod": "", "car":"shift", "key": "16"},{"cod": "1574", "car":"ئ", "key": "90"},{"cod": "1569", "car":"ء", "key": "88"},{"cod": "1572", "car":"ؤ", "key": "67"},{"cod": "1585", "car":"ر", "key": "86"},{"cod": "1604", "car":"ل", "key": "66"},{"cod": "1609", "car":"ى", "key": "78"},{"cod": "1577", "car":"ة", "key": "77"},{"cod": "1608", "car":"و", "key": "188"},{"cod": "1586", "car":"ز", "key": "190"},{"cod": "1586", "car":"ظ", "key": "223"},{"cod": "", "car":"shift2", "key": "shift"},{"cod": "", "car":"ctrl", "key": "17"},{"cod": "", "car":"fn", "key": "91"},{"cod": "", "car":"alt", "key": "18"},{"cod": "32", "car":"espace", "key": "32"},{"cod": "", "car":"alt2", "key": "18p"},{"cod": "", "car":"esc", "key": "93"},{"cod": "", "car":"ctrl2", "key": "17p"}]</p>
+			<p id="car" style="display: none;">[{"cod": "1584", "car":"ذ", "key": "192"},{"cod": "49", "car":"1", "key": "49"},{"cod": "50", "car":"2", "key": "50"},{"cod": "51", "car":"3", "key": "51"},{"cod": "52", "car":"4", "key": "52"},{"cod": "53", "car":"5", "key": "53"},{"cod": "54", "car":"6", "key": "54"},{"cod": "55", "car":"7", "key": "55"},{"cod": "56", "car":"8", "key": "56"},{"cod": "57", "car":"9", "key": "57"},{"cod": "48", "car":"0", "key": "48"},{"cod": "45", "car":"-", "key": "189"},{"cod": "61", "car":"=", "key": "187"},{"cod": "", "car":"backspace", "key": "8"},{"cod": "", "car":"tab", "key": "9"},{"cod": "1590", "car":"ض", "key": "81"},{"cod": "1589", "car":"ص", "key": "87"},{"cod": "1579", "car":"ث", "key": "69"},{"cod": "1602", "car":"ق", "key": "82"},{"cod": "1601", "car":"ف", "key": "84"},{"cod": "1594", "car":"غ", "key": "89"},{"cod": "1593", "car":"ع", "key": "85"},{"cod": "1607", "car":"ه", "key": "73"},{"cod": "1582", "car":"خ", "key": "79"},{"cod": "1581", "car":"ح", "key": "80"},{"cod": "1580", "car":"ج", "key": "219"},{"cod": "1583", "car":"د", "key": "221"},{"cod": "92", "car":"\\", "key": "220"},{"cod": "", "car":"cap", "key": "20"},{"cod": "1588",  "car":"ش", "key": "65"},{"cod": "1587", "car":"س", "key": "83"},{"cod": "1610", "car":"ي", "key": "68"},{"cod": "1576", "car":"ب", "key": "70"},{"cod": "1604", "car":"ل", "key": "71"},{"cod": "1575", "car":"ا", "key": "72"},{"cod": "1578", "car":"ت", "key": "74"},{"cod": "1606", "car":"ن", "key": "75"},{"cod": "1605", "car":"م", "key": "76"},{"cod": "1603", "car":"ك", "key": "186"},{"cod": "1591", "car":"ط", "key": "222"},{"cod": "", "car":"entrer", "key": "13"},{"cod": "", "car":"shift", "key": "16"},{"cod": "1574", "car":"ئ", "key": "90"},{"cod": "1569", "car":"ء", "key": "88"},{"cod": "1572", "car":"ؤ", "key": "67"},{"cod": "1585", "car":"ر", "key": "86"},{"cod": "1604", "car":"ل", "key": "66"},{"cod": "1609", "car":"ى", "key": "78"},{"cod": "1577", "car":"ة", "key": "77"},{"cod": "1608", "car":"و", "key": "188"},{"cod": "1586", "car":"ز", "key": "190"},{"cod": "1586", "car":"ظ", "key": "191"},{"cod": "", "car":"shift2", "key": "shift"},{"cod": "", "car":"ctrl", "key": "17"},{"cod": "", "car":"fn", "key": "91"},{"cod": "", "car":"alt", "key": "18"},{"cod": "32", "car":"espace", "key": "32"},{"cod": "", "car":"alt2", "key": "18p"},{"cod": "", "car":"esc", "key": "93"},{"cod": "", "car":"ctrl2", "key": "17p"}]</p>
 			<p id="text"></p>
 			<p id="a"></p>
-	<div style="padding-bottom: 30px;">
+	<div style="padding-bottom: 11px;">
 		<input type="text" name="demo" id="demo" style="width: 588px;" onkeydown="myFunction(event)">
 	</div>
 	
@@ -462,22 +222,38 @@ top: 319px;
 
 			var agauche=0;
 			/*rechercher indice d'un caractere dans la table data*/
-			function F(val){
+					
+	function F(val){
 			var a=0;
 			while(a<data.length && val!=data[a].cod)
 				a++;
 			return a;
 			}
-			
-			
+								var modal = document.getElementById('myModal');
+								// When the user clicks on <span> (x), close the modal
+					span.onclick = function() {
+					    modal.style.display = "none";
+					}
+
+					// When the user clicks anywhere outside of the modal, close it
+					window.onclick = function(event) {
+					    if (event.target == modal) {
+					        modal.style.display = "none";
+					    }
+					}
 			// Fonction pour la comparaison entre le caractere entré et la touche
 			function myFunction(event) {
 					var offseta = $('#offset').offset();
 			    var x = event.keyCode;
 			   console.log(x);console.log(T.length);
 			   if(i==T.length-1)
-			   	{
-			   	alert("Exercice terminé");}
+			   	{			/*rasee();*/
+			   		document.getElementById("modalcontent").innerHTML="انتهاء التمرين. النتيجة هي: "+document.forsec.secb.value+" دقيقة و "+document.forsec.seca.value+" ثانية";
+			   			 modal.style.display = "block";
+			   		/*alert("انتهاء التمرين. النتيجة هي: "+document.forsec.secb.value+" دقيقة و "+document.forsec.seca.value+" ثانية");*/
+			   		rasee();
+			   		event.preventDefault();
+			   	}
 			    			/*$("#h"+data[F(T[i])].key).offset({top: offset.top+20, left:offset.left});}
 			    					else $("#h"+data[F(T[i])].key).offset({top: offset.top+20, left:offset.left+320});}*/
 			    // console.log(x);

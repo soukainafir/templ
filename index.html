@@ -5,6 +5,7 @@
         <title>تعلم الكتابة</title>
         <meta content='width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no' name='viewport'>
         <!-- bootstrap 3.0.2 -->
+
         <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- font Awesome -->
         <link href="css/font-awesome.min.css" rel="stylesheet" type="text/css" />
@@ -22,6 +23,9 @@
         <link href="css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />
         <!-- Theme style -->
         <link href="css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="css/icomoon.css">
+         <link href="css/animate-custom.css" rel="stylesheet">
+
 
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -30,6 +34,9 @@
           <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
         <![endif]-->
     </head>
+    <style type="text/css">
+    h1{color: #7194B9;}
+    </style>
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
@@ -39,6 +46,8 @@
             <nav class="navbar navbar-static-top" role="navigation" style="background-color: #18bb9c;margin-left: 0px;">
                 
                 <div class="navbar-right">
+                                         <img src="image/logo.png"  style="width: 60px;height: 50px;margin-left: 30px;"/>
+
                     <ul class="nav navbar-nav">
                         <!-- Messages: style can be found in dropdown.less-->
                         <li class="dropdown messages-menu">
@@ -109,10 +118,14 @@
                 <section class="sidebar">
                   
                     <ul class="sidebar-menu">
-                        
-                        <li>
+                         <li>
                             <a href="index.html">
-                                <i class="fa fa-home"></i> <span>المساعدة</span> 
+                                <i class="fa fa-home"></i> <span>الصفحة الرئيسية</span> 
+                            </a>
+                        </li>
+                        <li>
+                           <a href="help.html">
+                                <i class="fa fa-question"></i> <span>المساعدة</span> 
                             </a>
                         </li>
                         <li class="treeview">
@@ -135,7 +148,7 @@
                         <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-book"></i>
-                                <span>الاساسىات 1</span>
+                                <span>الاساسيات 1</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
@@ -152,7 +165,7 @@
                          <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-book"></i>
-                                <span>الاساسىات 2</span>
+                                <span>الاساسيات 2</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
@@ -170,7 +183,7 @@
                          <li class="treeview">
                             <a href="#">
                                 <i class="fa fa-book"></i>
-                                <span>الاساسىات 3</span>
+                                <span>الاساسيات 3</span>
                                 <i class="fa fa-angle-left pull-right"></i>
                             </a>
                             <ul class="treeview-menu">
@@ -183,7 +196,22 @@
                                  <span></span>
                             </ul>
                         </li>
-
+                         <li class="treeview">
+                            <a href="#">
+                                <i class="fa fa-book"></i>
+                                <span>النصوص</span>
+                                <i class="fa fa-angle-left pull-right"></i>
+                            </a>
+                            <ul class="treeview-menu">
+                                <li><a href="basic2top.html"><i class="fa fa-angle-double-right"></i>  الصف
+  الاول</a></li>
+                                <li><a href="basic2home.html"><i class="fa fa-angle-double-right"></i>  الصف
+  الثاني</a></li>
+                                <li><a href="basic2bottum.html"><i class="fa fa-angle-double-right"></i>  الصف
+  الثالث</a></li>
+                                 <span></span>
+                            </ul>
+                        </li>
 
 
                          <span></span>
@@ -208,10 +236,43 @@
                 <!-- Main content -->
                 <section class="content" >
                
-                  <iframe src=" http://localhost/templ/accueil/index.html" style="width:1000px ; height:800px; frameborder: 0; border: 0; padding-left: 0px;"></iframe>
+                <!--   <iframe src=" http://localhost/templ/accueil/index.html" style="width:1000px ; height:800px; frameborder: 0; border: 0; padding-left: 0px;"></iframe>
+                 --><div id="greywrap">
+                 <div class="row">
+  <div class="col-md-8"><div class="row">
+                <div class="col-lg-4 callout  " style="padding-top: 75px;">
+                   <img src="image/icon-user.png"  style="margin-left: 15px;"/>
+                    <h1 style="padding-left: 20px;">من نحن؟</h1>
+                    <p style="font-size:17px">
+نحن تلامذة المدرسة المحمدية للمهندسين سكينة فرملي ، مريم الوافي و شيماء بورفون قمنا بهذا التطبيق بإشراف الأستاذ محمد الكريم بوزوبع </p>
+                </div><!-- col-lg-4 -->
+                    
+                <div class="col-lg-4 callout " style="border-left-width: 0px;padding-top: 75px;">
+                    <img src="image/logo.png"  style="width: 150px; height: 150px;margin-left: 15px;"/>
+                    <h1>مرحبا بكم في موقعنا</h1>
+                    <p style="font-size:17px"> برنامج معلم الكتابة هو برنامج تعليمي الغرض منه تعليمك وتدريبك على تحسين مستوى سرعة ودقة طباعتك على لوحة المفاتيح باللغة العربية  بدون استخدام حاسة البصر لإيجاد الحروف</p>
+                </div><!-- col-lg-4 --> 
                 
+                <div class="col-lg-4 callout" style="border-left-width: 0px;padding-top: 75px;">
+                      <img src="image/question-icon.png"  style="margin-left: 15px;width: 97px;"/>
+                    <h1 style="padding-left: 20px;">كيف أبدء ؟</h1>
+                    <p style="font-size:17px"> تابع بتمعن التقنيات الموضحة في الإرشاد وذلك بالضغط على "المساعدة" الموجودة جانبه لاكتساب القدرات المطلوبة للطباعة  تشمل دروس الطباعة على كافة الدروس المطلوبة لتعلم كيفية الطباعة .تابع تسلسل الدروس كماهو مبين جانبه   </p>
+                </div><!-- col-lg-4 --> 
+            </div><!-- row --></div>
+  <div class="col-md-4" style="
+    padding-left: 0px;
+    padding-right: 0px;
+    width: 207px;
+
+"> <img src="image/tooltip1.png" style="
+    width: 211px;
+    margin-top: 20px;
+    margin-right: 15px;
+    height: 64px;
+">
+</div>
                  
-          
+          </div>
 
                     <!-- Main row -->
                     <div class="row">
@@ -247,7 +308,11 @@
 
         <!-- add new calendar event modal -->
 
-
+        <script type="text/javascript">
+        function funct{
+    $('[data-toggle="tooltip"]').tooltip("show");
+   
+ });</script>
         <!-- jQuery 2.0.2 -->
        <script src="jquery.min.js"> </script>
         <!-- jQuery UI 1.10.3 -->
